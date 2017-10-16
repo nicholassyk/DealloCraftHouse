@@ -44,6 +44,7 @@ li img{
 }
 
 li a, .dropbtn {
+	position: relative;
     display: inline-block;
     color: #444;
     text-align: center;
@@ -64,7 +65,6 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    min-width: 150px;
 }
 
 .dropdown-content a {
@@ -72,6 +72,7 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+	width: 100px;
 }
 
 .dropdown-content a:hover {
@@ -122,6 +123,14 @@ label>input:checked + img{
     border: 2px solid;
 }
 
+.error {
+	width: 95%;
+	margin-top: 20px;
+	padding-left: 10px;
+	background-color: #ffe5e5;
+	border: 2px solid #ff6666;
+	border-radius: 5px;
+}
 
 /* Home Page Elements */
 #homebanner{
