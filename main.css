@@ -216,3 +216,19 @@ label>input:checked + img{
 	margin-left: 10%;
 	line-height: 1.6;
 }
+
+/*Bong code starts here*/
+
+.profilePic {
+    margin: 5%;
+    margin-left: 20%;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.profileDesc {
+    padding-top: 10px;
+    padding-left: 20px;
+}
