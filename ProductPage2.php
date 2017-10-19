@@ -57,9 +57,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Knife Set</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -81,9 +79,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Sitr Frying Wok Pan</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -104,9 +100,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Bean Bag</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -127,9 +121,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Shoes Rack</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>

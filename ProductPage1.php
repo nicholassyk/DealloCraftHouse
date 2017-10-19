@@ -55,9 +55,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Long Sleeve Blouse</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -79,9 +77,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Slim Sweatpants</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -102,9 +98,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">LED Leather Watch</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -125,9 +119,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Couple Bracelet</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>

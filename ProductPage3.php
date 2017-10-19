@@ -56,9 +56,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Sharp Microwave Oven</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -80,9 +78,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Midea Washing Machine</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -103,9 +99,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Philips Steam Iron</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -126,9 +120,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Midea Rice Cooker </span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>

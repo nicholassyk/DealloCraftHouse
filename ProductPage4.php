@@ -57,9 +57,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Pediasure Milk Powder</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -81,9 +79,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Boy Outfit Set</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -104,9 +100,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Kids Play House</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
@@ -127,9 +121,7 @@
   
   <div class="top">
     <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
       <li><span class="converse">Milk Bottle (Twin Pack)</span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
 </a></li>
     </ul>
   </div>
