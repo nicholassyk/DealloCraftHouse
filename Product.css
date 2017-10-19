@@ -13,25 +13,16 @@ h2 {
     font-size: 50px;
     padding-top: 44px;
 }
-.banner1 {
-    background-image: url('../image/mountains_minimal_5k-1280x720.jpg');
-    width: 1250px;
-    height: 170px;
-}
 
-#texttop {
-    text-align: right;
-    padding-top: 80px;
-    font-size: 22px;
-}
 
 #basketbox {
     padding-top: 70px;
 }
 
 body {
-    background-color: #ececea;
-    padding: 20px;
+    margin:0px;
+	background-color: #ffffff;
+	font-family: "Graphik webfont", "Arial", "sans-serif";    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -42,6 +33,14 @@ body {
      flex-wrap: wrap;
     
 }
+footer{
+    margin-top: 30px;
+    bottom: 0px;
+    position: relative;
+    width: 100%;
+	font-family: "Graphik webfont", "Arial", "sans-serif";
+}
+
 
 #banner {
     border-style: none;
@@ -144,3 +143,75 @@ body {
   color: #f00;
   text-decoration: line-through;
 }
+
+#content{
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+#nav {
+    display: inline;
+    float: left;
+	margin-top: 15px;
+	background-color: #ffffff;
+}
+
+
+#nav img{
+	margin-left: 40px;
+	margin-right: 10px;
+}
+
+#navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	background-color: #ffffff;
+}
+
+li img{
+    width: 100px;
+    height: 50px;
+}
+
+li a, .dropbtn {
+	position: relative;
+    display: inline-block;
+    color: #444;
+    text-align: center;
+    padding: 18px 50px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #afeeee;
+}
+
+li.dropdown {
+    display: inline-block;
+	margin-top: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+.dropdown-content a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	width: 100px;
+}
+
+.dropdown-content a:hover {
+    background-color: #afeeee;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+

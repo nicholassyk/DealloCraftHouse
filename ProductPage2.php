@@ -12,33 +12,27 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="css/Product.css" rel="stylesheet" />
+    <link href="Product.css" rel="stylesheet" />
 </head>
 
 <body>
     
-    <div class="banner1">
-        
-        <div class="row" id="banner" >
-            <div class="col-md-6">
-              <h2>Deallo Craft House Ltd.</h2>
-            </div>
-            
-            <div class="col-md-2" id="texttop">
-                <a href="#">Sell</a>
-            </div>
-            
-            <div class="col-md-2" id="texttop">
-                <a href="#">Sign In</a>
-            </div>
-            
-            <div class="col-md-2" id="basketbox">
-                <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-shopping-cart"></span>My Basket</a>
-            </div>  
-         </div>
-        
-    </div>
+
+        <ul id="navbar">
+            <li id="nav"><img src="logo.svg"></li>
+            <li id="nav"><a href="Home.html">Home</a></li>
+            <li id="nav"><a href="Product.html">Products</a></li>
+            <li id="nav"><a href="Chat.html">Chat Forum</a></li>
+            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <li class="dropdown" style="float:right">
+                <a class="dropbtn">Sign In</a>
+                    <div class="dropdown-content">
+                          <a href="Login.php">Sign In</a>
+                          <a href="Signup.php">Sign Up</a>
+                    </div>
+            </li>
+        </ul>
+        <hr />
         <hr />
         <hr>
     <div class="container">
