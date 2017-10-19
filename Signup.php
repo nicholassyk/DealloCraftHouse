@@ -10,7 +10,7 @@
         <meta name="SignUp" content="SignUp">
     </head>
     <body>
-        <p><a href="Home.html"><img src="logo.svg" id="homeimg" style="width:150px; height:60px; vertical-align-center"></a></p><br>
+        <p><a href="index.php"><img src="logo.svg" id="homeimg" style="width:150px; height:60px; vertical-align-center"></a></p><br>
         <form id="registration" method="post" action="Signup.php">
             <h1>Create Account</h1>
             Username: <br>

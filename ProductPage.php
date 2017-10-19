@@ -12,48 +12,40 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="css/Product.css" rel="stylesheet" />
+    <link href="Product.css" rel="stylesheet" />
 </head>
 
 <body>
     
-    <div class="banner1">
-        
-        <div class="row" id="banner" >
-            <div class="col-md-6">
-              <h2>Deallo Craft House Ltd.</h2>
-            </div>
-            
-            <div class="col-md-2" id="texttop">
-                <a href="#">Sell</a>
-            </div>
-            
-            <div class="col-md-2" id="texttop">
-                <a href="#">Sign In</a>
-            </div>
-            
-            <div class="col-md-2" id="basketbox">
-                <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-shopping-cart"></span>My Basket</a>
-            </div>  
-         </div>
-        
-    </div>
+    <ul id="navbar">
+            <li id="nav"><img src="logo.svg"></li>
+            <li id="nav"><a href="index.php">Home</a></li>
+            <li id="nav"><a href="ProductPage.php">Products</a></li>
+            <li id="nav"><a href="Chat.html">Chat Forum</a></li>
+            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <li class="dropdown" style="float:right">
+                <a class="dropbtn">Sign In</a>
+                    <div class="dropdown-content">
+                          <a href="Login.php">Sign In</a>
+                          <a href="Signup.php">Sign Up</a>
+                    </div>
+            </li>
+        </ul>
         <hr />
         <hr>
     <div class="container">
             <div class="row" id="navi">
                 <div class="col-md-3">
-                    <a href="#">Clothing & Accessories</a>
+                    <a href="ProductPage1.php">Clothing & Accessories</a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#">Craft Supplies</a>
+                    <a href="ProductPage2.php">Home & Living</a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#">Home & Living</a>
+                    <a href="ProductPage3.php">Electronics</a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#">Kids & Babies</a>
+                    <a href="ProductPage4.php">Kids & Babies</a>
                 </div>
             </div>
     </div>

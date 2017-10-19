@@ -20,8 +20,8 @@
    
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
-            <li id="nav"><a href="Home.html">Home</a></li>
-            <li id="nav"><a href="Product.html">Products</a></li>
+            <li id="nav"><a href="index.php">Home</a></li>
+            <li id="nav"><a href="ProductPage.php">Products</a></li>
             <li id="nav"><a href="Chat.html">Chat Forum</a></li>
             <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
             <li class="dropdown" style="float:right">

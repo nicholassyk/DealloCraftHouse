@@ -10,7 +10,7 @@
         <meta name="Login" content="Login">
     </head>
     <body>
-        <p><a href="Home.html"><img src="logo.svg" id="homeimg" style="width:150px; height:60px; vertical-align-center"></a></p><br>
+        <p><a href="index.php"><img src="logo.svg" id="homeimg" style="width:150px; height:60px; vertical-align-center"></a></p><br>
         <form method="post" action="Login.php">
             <h1>Sign In</h1>
             Username<br>
