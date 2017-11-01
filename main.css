@@ -217,18 +217,80 @@ label>input:checked + img{
 	line-height: 1.6;
 }
 
-/*Bong code starts here*/
-
-.profilePic {
-    margin: 5%;
-    margin-left: 20%;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    float: left;
+/* Profile Page */
+#profilewrapper{
+	width: 100%;
+	float: left;
 }
 
-.profileDesc {
-    padding-top: 10px;
-    padding-left: 20px;
+.profileimgwrapper {
+	text-align: center;
+	width: 21%;
+	float: left;
+	margin-top: 3%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	padding: 5%;
+	padding-bottom: 4.5%;
+	border: 2px solid #afeeee;
+}
+
+.profilepicture {
+	width: 250px;
+	height: 250px;
+	margin-bottom: 20px;
+	border-radius: 50%;
+}
+
+#profileimgname {
+	font-size: 1.2em;
+}
+
+#profiledescriptionwrapper {
+	width: 49%;
+	float: left;
+	margin-left: 4%;
+	margin-top: 3%;
+	padding: 2%;
+	padding-left: 4%;
+	border: 2px solid #afeeee;
+}
+
+
+#profileusername {
+	font-size: 1.7em;
+}
+
+.profiledescription {
+	
+}
+
+#profilebio{
+	line-height: 1.7;
+}
+
+#profilehistorywrapper {
+	text-align: center;
+	width: 80%;
+	margin: 10%;
+	margin-top: 1%;
+	float: left;
+}
+
+.historytitle {
+	font-size: 1.7em;
+	margin-bottom: 4%;
+}
+
+#profiletable {
+	width: 100%;
+}
+
+#profiletable, th, td {
+	padding: 2%;
+	border: 2px solid #afeeee;
+}
+
+#profiletable th {
+	background-color: #afeeee;
 }

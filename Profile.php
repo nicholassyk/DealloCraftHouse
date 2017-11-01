@@ -18,57 +18,128 @@
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
             <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
             <li class="dropdown" style="float:right">
-                <a class="dropbtn">Sign In</a>
-                    <div class="dropdown-content">
-                          <a href="Login.php">Sign In</a>
-                          <a href="Signup.php">Sign Up</a>
-                    </div>
+                <a class="dropbtn">
+				<?php
+					if($result = $con->query("SELECT username FROM user WHERE id = 0")) {
+					if($count = $result->num_rows) {
+						while ($row = $result->fetch_object()){
+							echo $row->username;
+						}
+					}
+					}
+				?>
+				</a>
             </li>
         </ul>
 		<hr>
-            <img src="image/index.jpg" alt="profileImg" class="profilePic">
-
-        
-        <div class="profileDesc">
-            
-            <p id="userName"><?php 
-				if (isset($_SESSION['username'])){
-					echo 'Welcome, ', $_SESSION['username'];
+		
+		<div id="profilewrapper">
+		
+		<div class="profileimgwrapper">
+			<img src="image/swift.jpg" alt="profileImg" class="profilepicture">
+			
+			<p id="profileimgname">
+			<?php
+				if($result = $con->query("SELECT firstname, lastname FROM user WHERE id = 0")) {
+				if($count = $result->num_rows) {
+					while ($row = $result->fetch_object()){
+						echo $row->firstname, ' ', $row->lastname;
+					}
 				}
-				?></p>
-            <P id="userDesc"><b>Email:</b> 100067364@students.swinburne.edu.my</P>
-            <p id="userNews"><b>NewsLetter:</b> On</p>
-            <p id="userAddress"><b>Address:</b> No78 Sand Garden 5A Street, 94700 Serian, Kuching, Sarawak</p>
+				}
+			?>
+		
+			</p>
+			
+			<p><img src="image/5stars.svg" alt="5 Stars Rating" class="rating"></p>
+			
+		</div>
+		
+        <div id="profiledescriptionwrapper">
+		<div class="profiledescription">
+            <p id="profileusername">
+			<?php
+				if($result = $con->query("SELECT username FROM user WHERE id = 0")) {
+				if($count = $result->num_rows) {
+					while ($row = $result->fetch_object()){
+						echo $row->username, '\'s Biography';
+					}
+				}
+				}
+			?>
+			</p>
+			
+			<p id="profilebio">
+			<?php
+				if($result = $con->query("SELECT bio FROM user WHERE id = 0")) {
+				if($count = $result->num_rows) {
+					while ($row = $result->fetch_object()){
+						echo $row->bio;
+					}
+				}
+				}
+			?>
+			</p>
+			
+			<br>
+			
+            <p id="profileuseremail">
+			Email:
+			<?php
+				if($result = $con->query("SELECT email FROM user WHERE id = 0")) {
+				if($count = $result->num_rows) {
+					while ($row = $result->fetch_object()){
+						echo $row->email;
+					}
+				}
+				}
+			?>
+			</p>
+            <p id="profileuseraddress">
+			Address:
+			<?php
+				if($result = $con->query("SELECT address FROM user WHERE id = 0")) {
+				if($count = $result->num_rows) {
+					while ($row = $result->fetch_object()){
+						echo $row->address;
+					}
+				}
+				}
+			?>
+			</p>
         </div>
-            <a href="facebook.com" class="textImg">Edit</a>
-
-      <br>
-      <br>
-      <br>
-      <br>
-
-        <table width="45%" id="table" align="center">
-          <tr>
-            <th>Order#</th>
-            <th>Placed On</th> 
-            <th>Total</th>
-              <th>Status</th>
-          </tr>
-          <tr>
-            <td>152035</td>
-            <td>10/10/2017</td> 
-            <td>RM 10.92</td>
-            <td>Done</td>
-          </tr>
-          <tr>
-            <td>335737</td>
-            <td>10/10/2017</td> 
-            <td>RM 30.10</td>
-            <td>Done</td>
-          </tr>
-        </table>
-        <br>
-        
+		
+		</div>
+	</div>
+	
+	<div id="profilehistorywrapper">
+		<p class="historytitle">Purchase History</p>
+		
+		<table id="profiletable">
+			<tr>
+				<th>Order #</th>
+				<th>Placed On</th>
+				<th>Amount</th>
+				<th>Status</th>
+			</tr>
+			
+			<tr>
+				<td>1234567</td>
+				<td>02/11/2017</td>
+				<td>RM25.00</td>
+				<td>Delivered</td>
+			</tr>
+			
+			<tr>
+				<td>7654321</td>
+				<td>02/11/2017</td>
+				<td>RM52.00</td>
+				<td>Shipped</td>
+			</tr>
+		
+		</table>
+		
+	</div>
     
     <footer>
 		<hr>
