@@ -1,4 +1,5 @@
 <?php require 'server.php'; session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     
@@ -18,10 +19,14 @@
             <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
             <li class="dropdown" style="float:right">
                 <a class="dropbtn">
-				<?php 
-				if (isset($_SESSION['username'])){
-					echo 'Welcome, ', $_SESSION['username'];
-				}
+				<?php
+					if($result = $con->query("SELECT username FROM user WHERE id = 0")) {
+					if($count = $result->num_rows) {
+						while ($row = $result->fetch_object()){
+							echo $row->username;
+						}
+					}
+					}
 				?>
 				</a>
                     <div class="dropdown-content">
