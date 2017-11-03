@@ -261,3 +261,11 @@ li.dropdown {
     display: block;
 }
 
+form{
+    width: 350px;
+    margin: 0 auto;
+    border: medium solid #D3D3D3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
