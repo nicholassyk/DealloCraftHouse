@@ -4,7 +4,4 @@ textarea{
 
 #thread{
 	border: 1px #d3d3d3 solid;
-	height: 350px;
-	width: 350px;
-	overflow:scroll;
 }

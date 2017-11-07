@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Kuching');
 $connect = mysqli_connect('localhost', 'root', '', 'message');
 if(mysqli_connect_errno())
 	{
@@ -9,14 +10,15 @@ if(mysqli_connect_errno())
 	}
 $_SESSION['posted'] = false;
 if(isset($_POST['submit'])){
+	$time = date("g:i:s A");
 	$name = $_POST['fname'];
 	$msg = $_POST['message'];
 	$result = "";
 	if(!empty($msg) && !empty($name)){
 		$query = "INSERT INTO message (";
-		$query .= " name, messages";
+		$query .= " name, messages, time";
 		$query .= ") VALUES (";
-		$query .= " '{$name}','{$msg}'";
+		$query .= " '{$name}','{$msg}','{$time}'";
 		$query .= ")";
 		$result = mysqli_query($connect, $query);
 	}
@@ -51,20 +53,21 @@ if(isset($_POST['submit'])){
 		<hr>
 		
         <div id="content">
-			<div id="thread">
+			<div id="thread" style="width:800px; margin:0 auto;">
 				<?php
 					$select = "SELECT * FROM message";
 					$q = mysqli_query($connect, $select);
 					while($row = mysqli_fetch_array($q, MYSQLI_ASSOC)){
-						echo $row['name']. ": ". $row['messages']."<br>";
+						echo $row['name']. ": ". $row['messages']. "  [".$row['time']."]"."<br>";
 					}
 				?>
 			</div>
-            <form method="POST" action="Chat.php">
+            <form method="POST" action="Chat.php" style="margin-top:20px;">
 				<label for= "fname">Name:</label>
 				<input type="text" name = "fname" id="fname"><br>
-					<textarea name="message" id="message" rows = "4" cols="35"></textarea><br>
-					<button type="submit" name="submit">Submit</button>
+				<label for= "message">Message:</label>
+					<input type="text" name="message" id="message" rows = "4" cols="35"><br>
+					<button type="submit" name="submit" style="margin-top:10px;">Submit</button>
 			</form>
         </div>
    
