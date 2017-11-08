@@ -63,7 +63,7 @@
     </div>
   
     <div class="middle">
-      <a href="Product1.php"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+        <a href="SpecificProductPage1.php?id=<?php echo $row['productid']; ?>"><img src="image/product_1_1.jpg" alt="product 1" /></a>
     </div>
   
   <div class="bottom">

@@ -38,22 +38,20 @@
 		}	
 	}
 
-    $sql1 = "SELECT title, type, name, brand, description, price FROM products where type = 'type1'";
+    $sql1 = "SELECT * FROM products where type = 'type1'";
     $result1 = mysqli_query($con, $sql1);
 
-    $sql2 = "SELECT title, type, name, brand, description, price FROM products where type = 'type2'";
+    $sql2 = "SELECT * FROM products where type = 'type2'";
     $result2 = mysqli_query($con, $sql2);
 
-    $sql3 = "SELECT title, type, name, brand, description, price FROM products where type = 'type3'";
+    $sql3 = "SELECT * FROM products where type = 'type3'";
     $result3 = mysqli_query($con, $sql3);
 
-    $sql4 = "SELECT title, type, name, brand, description, price FROM products where type = 'type4'";
+    $sql4 = "SELECT * FROM products where type = 'type4'";
     $result4 = mysqli_query($con, $sql4);
 
-    $sql = $con->prepare("SELECT id, title, type, name, brand, description, price, comments, ratings FROM products where id = ?");
-    $subjectID = 1;
-    $sql->bind_param("i", $subjectID);
-    $sql->execute();
-    $result = $sql->get_result();
-    $row = $result->fetch_assoc();
+    $stmt = $con->prepare("SELECT * FROM products where productid = ?");
+    $stmt->bind_param("i", $subjectID);
+    $stmt->execute();
+    $result = $stmt->get_result();
 ?>

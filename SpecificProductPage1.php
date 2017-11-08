@@ -1,4 +1,4 @@
-<?php require 'server2.php'; session_start(); $subjectID = $_GET['id']; ?>
+<?php require 'server2.php'; session_start(); $subjectID = $_GET['id']; $row=$result->fetch_assoc(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
