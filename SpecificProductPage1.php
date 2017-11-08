@@ -1,10 +1,16 @@
-<?php require 'server2.php'; session_start(); $subjectID = $_GET['id']; $row=$result->fetch_assoc(); ?>
+<?php require 'server2.php'; session_start(); $subjectID = $_GET['id']; 
+    $stmt = $con->prepare("SELECT * FROM products where productid = ?");
+    $stmt->bind_param("i", $subjectID);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row=$result->fetch_assoc(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <title>Template that uses Bootstrap</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap -->
+    <!-- Bootstra p -->
    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML 5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

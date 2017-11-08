@@ -63,10 +63,10 @@
             <input type="text" name="price" value="<?php if (isset($_POST["price"])) echo $_POST["price"]; ?>"><br><br>
         
             Comments: <br>
-            <input type="text" name="comments" value="<?php if (isset($_POST["comments"])) echo $_POST["comments"]; ?>"><br><br>
+            <textarea name="comments" rows="6" value="<?php if (isset($_POST["comments"])) echo $_POST["comments"]; ?>" placeholder="Explain more on your product's details"></textarea><br><br>
         
             Ratings: <br>
-            <input type="text" name="ratings" value="<?php if (isset($_POST["ratings"])) echo $_POST["ratings"]; ?>"><br><br>
+            <input type="number" name="ratings" min="1" max="5" value="<?php if (isset($_POST["ratings"])) echo $_POST["ratings"]; ?>"><br><br>
         
 			<?php require 'errors.php'; ?><br>
         

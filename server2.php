@@ -50,8 +50,4 @@
     $sql4 = "SELECT * FROM products where type = 'type4'";
     $result4 = mysqli_query($con, $sql4);
 
-    $stmt = $con->prepare("SELECT * FROM products where productid = ?");
-    $stmt->bind_param("i", $subjectID);
-    $stmt->execute();
-    $result = $stmt->get_result();
 ?>
