@@ -1,4 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
+<?php require 'server2.php'; session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,11 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="Product.css" rel="stylesheet" />
+    <link href="css/Product.css" rel="stylesheet" />
 </head>
 
 <body>
     
-   
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
@@ -52,98 +51,45 @@
     </div>
         <hr />
     
- <div class="block">
+<?php
+    while($row=mysqli_fetch_array($result3)) { 
+        ?>
+    <div class="block">
   
-  <div class="top">
-    <ul>
-      <li><span class="converse">Sharp Microwave Oven</span></li>
-</a></li>
-    </ul>
-  </div>
+    <div class="top">
+    <span class="converse">
+          <?php echo $row['title']; ?>
+    </span>
+    </div>
   
-  <div class="middle">
-      <a href="Product9.php"><img src="image/product_3_1.jpg" alt="product 1" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">R202ZS Microwave Oven</div>
-    <div class="info">Brand: Sharp</div>
-    <div class="style">800W Low Power Consumption, 11 Power Levels</div>
-    <div class="price">RM199.00 <span class="old-price">RM439.00</span></div>
-  </div>
-  
-</div>
-    
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Midea Washing Machine</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product10.php"><img src="image/product_3_2.jpg" alt="product 2" /></a>
-  </div>
+    <div class="middle">
+      <a href="Product1.php"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+    </div>
   
   <div class="bottom">
-    <div class="heading">Fully Automatic 7KG MFW-701S Washing Machine</div>
-    <div class="info">Brand: Midea</div>
-    <div class="style">Stainless Steel Drum, Metal Body and Tempered Glass Window</div>
-    <div class="price">RM457.00 <span class="old-price">RM600.00</span></div>
+    <div class="heading">
+        <?php echo $row['name']; ?>
+    </div>
+    <div class="info">
+        <?php echo $row['brand']; ?>
+    </div>
+    <div class="style">
+        <?php echo $row['description']; ?>
+    </div>
+    <div class="price">
+        <?php echo 'RM ', $row['price']; ?>
+    </div>
   </div>
   
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Philips Steam Iron</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product11.php"><img src="image/product_3_3.jpg" alt="product 3" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">GC1426 Steam Iron</div>
-    <div class="info">Brand: Philips</div>
-    <div class="style">1400W Power Consumption, Non-Stick Soleplate & 160ml Water Tank</div>
-    <div class="price">RM64.99 <span class="old-price">RM89.00</span></div>
-  </div>
-  
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Midea Rice Cooker </span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-    <a href="Product12.php"><img src="image/product_3_4.jpg" alt="product 4" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">MG-GP18B Rice Cooker (White)</div>
-    <div class="info">Brand: Midea</div>
-    <div class="style">1.8 Litre, Non-Stick Inner Pot & 700W Power</div>
-    <div class="price">RM58.00 <span class="old-price">RM109.00</span></div>
-  </div>
-  
-</div>
+    </div>
+    <?php
+    }
+?>
     <hr />
 
      <footer>
 		<hr>
-        <div id="content">
             <p>Deallo Craft House Ltd. <button onclick="Subscribe()" id="subscibe" style="float:right">Subscribe To Us!</button></p>
-        </div>
         <script src="main.js"></script>
     </footer>
    

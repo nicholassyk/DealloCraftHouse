@@ -1,4 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
+<?php require 'server2.php'; session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,11 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="Product.css" rel="stylesheet" />
+    <link href="css/Product.css" rel="stylesheet" />
 </head>
 
 <body>
     
-
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
@@ -32,7 +31,6 @@
                     </div>
             </li>
         </ul>
-        <hr />
         <hr />
         <hr>
     <div class="container">
@@ -53,98 +51,45 @@
     </div>
         <hr />
     
- <div class="block">
+<?php
+    while($row=mysqli_fetch_array($result2)) { 
+        ?>
+    <div class="block">
   
-  <div class="top">
-    <ul>
-      <li><span class="converse">Knife Set</span></li>
-</a></li>
-    </ul>
-  </div>
+    <div class="top">
+    <span class="converse">
+          <?php echo $row['title']; ?>
+    </span>
+    </div>
   
-  <div class="middle">
-      <a href="Product5.php"><img src="image/product_2_1.jpg" alt="product 1" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Stainless Steel Knives with Chopping Board</div>
-    <div class="info">Brand: OEM</div>
-    <div class="style">Rust Proof, 7 Pieces Set</div>
-    <div class="price">RM16.90 <span class="old-price">RM88.00</span></div>
-  </div>
-  
-</div>
-    
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Sitr Frying Wok Pan</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product6.php"><img src="image/product_2_2.jpg" alt="product 2" /></a>
-  </div>
+    <div class="middle">
+      <a href="Product1.php"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+    </div>
   
   <div class="bottom">
-    <div class="heading">Non-Stick Stir Fry Cooking Wok Pan</div>
-    <div class="info">Brand: NaVa</div>
-    <div class="style">Three Layers Steel, Magnetized Bottom</div>
-    <div class="price">RM38.10 <span class="old-price">RM79.00</span></div>
+    <div class="heading">
+        <?php echo $row['name']; ?>
+    </div>
+    <div class="info">
+        <?php echo $row['brand']; ?>
+    </div>
+    <div class="style">
+        <?php echo $row['description']; ?>
+    </div>
+    <div class="price">
+        <?php echo 'RM ', $row['price']; ?>
+    </div>
   </div>
   
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Bean Bag</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product7.php"><img src="image/product_2_3.jpg" alt="product 3" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Maroon 2KG Bean Bag</div>
-    <div class="info">Brand: LZD</div>
-    <div class="style">Double Zipper, Black Bottom and Non-removal Cover</div>
-    <div class="price">RM64.90 <span class="old-price">RM259.00</span></div>
-  </div>
-  
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Shoes Rack</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-        <a href="Product8.php"><img src="image/product_2_4.jpg" alt="product 4" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">4 Layers Stainless Steel Shoes Rack</div>
-    <div class="info">Brand: OEM</div>
-    <div class="style">Stainless Steel Tube, Sturdy & Lightweight</div>
-    <div class="price">RM14.50 <span class="old-price">RM28.80</span></div>
-  </div>
-  
-</div>
+    </div>
+    <?php
+    }
+?>
     <hr />
 
      <footer>
 		<hr>
-        <div id="content">
             <p>Deallo Craft House Ltd. <button onclick="Subscribe()" id="subscibe" style="float:right">Subscribe To Us!</button></p>
-        </div>
         <script src="main.js"></script>
     </footer>
    

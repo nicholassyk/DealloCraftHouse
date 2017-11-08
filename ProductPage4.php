@@ -1,4 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
+<?php require 'server2.php'; session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,11 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="Product.css" rel="stylesheet" />
+    <link href="css/Product.css" rel="stylesheet" />
 </head>
 
 <body>
     
-  
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
@@ -32,7 +31,6 @@
                     </div>
             </li>
         </ul>
-        <hr />
         <hr />
         <hr>
     <div class="container">
@@ -53,98 +51,45 @@
     </div>
         <hr />
     
- <div class="block">
+<?php
+    while($row=mysqli_fetch_array($result4)) { 
+        ?>
+    <div class="block">
   
-  <div class="top">
-    <ul>
-      <li><span class="converse">Pediasure Milk Powder</span></li>
-</a></li>
-    </ul>
-  </div>
+    <div class="top">
+    <span class="converse">
+          <?php echo $row['title']; ?>
+    </span>
+    </div>
   
-  <div class="middle">
-      <a href="Product13.php"><img src="image/product_4_1.jpg" alt="product 1" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Complete Nutrition Milk Powder</div>
-    <div class="info">Brand: Pediasure</div>
-    <div class="style">1.6KG, Vanila Flavoured & For 1 to 10 Years Old</div>
-    <div class="price">RM139.80</div>
-  </div>
-  
-</div>
-    
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Boy Outfit Set</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product14.php"><img src="image/product_4_2.jpg" alt="product 2" /></a>
-  </div>
+    <div class="middle">
+      <a href="Product1.php"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+    </div>
   
   <div class="bottom">
-    <div class="heading">Toddler T-Shirt + Short Pants Outfit Set</div>
-    <div class="info">Brand: OEM</div>
-    <div class="style">Comes in Green, 100% Brand New & 2017 New Style</div>
-    <div class="price">RM21.21 <span class="old-price">RM26.21</span></div>
+    <div class="heading">
+        <?php echo $row['name']; ?>
+    </div>
+    <div class="info">
+        <?php echo $row['brand']; ?>
+    </div>
+    <div class="style">
+        <?php echo $row['description']; ?>
+    </div>
+    <div class="price">
+        <?php echo 'RM ', $row['price']; ?>
+    </div>
   </div>
   
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Kids Play House</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product15.php"><img src="image/product_4_3.jpg" alt="product 3" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Fun Park Kids Play House</div>
-    <div class="info">Brand: Haenim</div>
-    <div class="style">High Quality Plastics Made, Easily Assembled</div>
-    <div class="price">RM1288.00 <span class="old-price">RM1688.00</span></div>
-  </div>
-  
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Milk Bottle (Twin Pack)</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-    <a href="Product16.php"><img src="image/product_4_4.jpg" alt="product 4" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Natural Blue Bottle 9oz / 260ml x 2</div>
-    <div class="info">Brand: Phillips Avent</div>
-    <div class="style">BPA Free, Simple to Use and Clean & Easily Assembled</div>
-    <div class="price">RM56.00 <span class="old-price">RM128.90</span></div>
-  </div>
-  
-</div>
+    </div>
+    <?php
+    }
+?>
     <hr />
 
      <footer>
 		<hr>
-        <div id="content">
             <p>Deallo Craft House Ltd. <button onclick="Subscribe()" id="subscibe" style="float:right">Subscribe To Us!</button></p>
-        </div>
         <script src="main.js"></script>
     </footer>
    

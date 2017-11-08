@@ -6,13 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap -->
    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- HTML5 shim and Respond.js IE8 support of HTML 5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-     <script src="js/html5shiv.js"></script>
-     <script src="js/respond.min.js"></script>
-    <![endid]-->
-    <link href="Product1.css" rel="stylesheet" />
+    <link href="css/Product1.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -38,25 +32,44 @@
     
     <form id="upload" method="post" action="selling.php">
             <h1>Upload a Product</h1>
+        
             Title: <br>
             <input type="text" name="title" value="<?php if (isset($_POST["title"])) echo $_POST["title"]; ?>"><br><br>
+        
             Type: <br>
-            <input type="text" name="type" value="<?php if (isset($_POST["type"])) echo $_POST["type"]; ?>"><br><br>
+            <select name="type">
+                <option value="0" selected>Please select a type</option>
+                
+                <option value="type1">Clothing & Accessories</option>
+                
+                <option value="type2">Home & Living</option>
+                
+                <option value="type3">Electronics</option>
+                
+                <option value="type4">Kids & Babies</option>
+            </select>    
+            <br><br>
+        
             Name: <br>
             <input type="text" name="name" value="<?php if (isset($_POST["name"])) echo $_POST["name"]; ?>"><br><br>
+        
             Brand: <br>
             <input type="text" name="brand" value="<?php if (isset($_POST["brand"])) echo $_POST["brand"]; ?>"><br><br>
+            
             Description: <br>
-            <input type="text" name="description" value="<?php if (isset($_POST["description"])) echo $_POST["description"]; ?>"><br><br>
-            Price: <br>
-            <input type="text" name="priceold" value="<?php if (isset($_POST["priceold"])) echo $_POST["priceold"]; ?>"><br><br>
-            Discounted price (if any): <br>
-            <input type="text" name="pricenew" value="<?php if (isset($_POST["pricenew"])) echo $_POST["pricenew"]; ?>"><br><br>
+            <textarea name="description" rows="6" value="<?php if (isset($_POST["description"])) echo $_POST["description"]; ?>" placeholder="Briefly explain your product"></textarea><br><br>
+        
+            Price (RM): <br>
+            <input type="text" name="price" value="<?php if (isset($_POST["price"])) echo $_POST["price"]; ?>"><br><br>
+        
             Comments: <br>
             <input type="text" name="comments" value="<?php if (isset($_POST["comments"])) echo $_POST["comments"]; ?>"><br><br>
+        
             Ratings: <br>
             <input type="text" name="ratings" value="<?php if (isset($_POST["ratings"])) echo $_POST["ratings"]; ?>"><br><br>
+        
 			<?php require 'errors.php'; ?><br>
+        
             <input type="submit" name="upload" value="Upload this item!">
         </form>
     

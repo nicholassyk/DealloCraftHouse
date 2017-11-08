@@ -1,4 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
+<?php require 'server2.php'; session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="Product.css" rel="stylesheet" />
+    <link href="css/Product.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -51,91 +51,40 @@
     </div>
         <hr />
     
- <div class="block">
+<?php
+    while($row=mysqli_fetch_array($result1)) { 
+        ?>
+    <div class="block">
   
-  <div class="top">
-    <ul>
-      <li><span class="converse">Long Sleeve Blouse</span></li>
-</a></li>
-    </ul>
-  </div>
+    <div class="top">
+    <span class="converse">
+          <?php echo $row['title']; ?>
+    </span>
+    </div>
   
-  <div class="middle">
-      <a href="Product1.php"><img src="image/product_1_1.jpg" alt="product 1" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">>Women Oversized Casual Top</div>
-    <div class="info">Brand: Zanzea</div>
-    <div class="style">Rayon Cotton, No Pockets</div>
-    <div class="price">RM34.90 <span class="old-price">RM79.80</span></div>
-  </div>
-  
-</div>
-    
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Slim Sweatpants</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product2.php"><img src="image/product_1_2.jpg" alt="product 2" /></a>
-  </div>
+    <div class="middle">
+        <a href="SpecificProductPage1.php?id='.$row['id'].'"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+    </div>
   
   <div class="bottom">
-    <div class="heading">Elastic Waist Jogger Pants</div>
-    <div class="info">Brand: OEM</div>
-    <div class="style">Cotton Made, Drawstring Waistband</div>
-    <div class="price">RM31.90 <span class="old-price">RM65.00</span></div>
+    <div class="heading">
+        <?php echo $row['name']; ?>
+    </div>
+    <div class="info">
+        <?php echo $row['brand']; ?>
+    </div>
+    <div class="style">
+        <?php echo $row['description']; ?>
+    </div>
+    <div class="price">
+        <?php echo 'RM ', $row['price']; ?>
+    </div>
   </div>
   
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">LED Leather Watch</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product3.php"><img src="image/product_1_3.jpg" alt="product 3" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">Touch Screen LED Watch</div>
-    <div class="info">Brand: Vanier</div>
-    <div class="style">Round Dial, Suitable for Casual & Business</div>
-    <div class="price">RM29.90 <span class="old-price">RM139.00</span></div>
-  </div>
-  
-</div>
-<div class="block">
-  
-  <div class="top">
-    <ul>
-      <li><span class="converse">Couple Bracelet</span></li>
-</a></li>
-    </ul>
-  </div>
-  
-  <div class="middle">
-      <a href="Product4.php"><img src="image/product_1_4.jpg" alt="product 4" /></a>
-  </div>
-  
-  <div class="bottom">
-    <div class="heading">2pcs Black and White Bracelet</div>
-    <div class="info">Brand: Fantastic Flower</div>
-    <div class="style">8mm Black Matte Agate & White Howlite</div>
-    <div class="price">RM13.43 <span class="old-price">RM39.88</span></div>
-  </div>
-  
-</div>
+    </div>
+    <?php
+    }
+?>
     <hr />
 
      <footer>

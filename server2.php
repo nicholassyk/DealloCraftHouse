@@ -8,8 +8,7 @@
 		$name = $_POST['name'];
 		$brand = $_POST['brand'];
 		$description = $_POST['description'];
-		$pricenew = $_POST['pricenew'];
-		$priceold = $_POST['priceold'];
+		$price = $_POST['price'];
 		$comments = $_POST['comments'];
 		$ratings = $_POST['ratings'];
 	
@@ -29,13 +28,32 @@
 		if (empty($description)) {
 			array_push($errors, "Description is required");
 		}
-		if (empty($priceold)) {
+		if (empty($price)) {
 			array_push($errors, "Price is required");
 		}
 		
 		// Save to database if no errors
 		if (count($errors) == 0) {
-			$sql = $con->query("INSERT INTO products (title, type, name, brand, description, pricenew, priceold, comments, ratings) VALUES('{$title}', '{$type}', '{$name}', '{$brand}', '{$description}', '{$pricenew}', '{$priceold}', '{$comments}', '{$ratings}')");
+			$sql = $con->query("INSERT INTO products (title, type, name, brand, description, price, comments, ratings) VALUES('{$title}', '{$type}', '{$name}', '{$brand}', '{$description}', '{$price}', '{$comments}', '{$ratings}')");
 		}	
 	}
+
+    $sql1 = "SELECT title, type, name, brand, description, price FROM products where type = 'type1'";
+    $result1 = mysqli_query($con, $sql1);
+
+    $sql2 = "SELECT title, type, name, brand, description, price FROM products where type = 'type2'";
+    $result2 = mysqli_query($con, $sql2);
+
+    $sql3 = "SELECT title, type, name, brand, description, price FROM products where type = 'type3'";
+    $result3 = mysqli_query($con, $sql3);
+
+    $sql4 = "SELECT title, type, name, brand, description, price FROM products where type = 'type4'";
+    $result4 = mysqli_query($con, $sql4);
+
+    $sql = $con->prepare("SELECT id, title, type, name, brand, description, price, comments, ratings FROM products where id = ?");
+    $subjectID = 1;
+    $sql->bind_param("i", $subjectID);
+    $sql->execute();
+    $result = $sql->get_result();
+    $row = $result->fetch_assoc();
 ?>

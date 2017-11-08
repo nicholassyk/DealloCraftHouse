@@ -1,4 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
+<?php require 'server2.php'; session_start(); $subjectID = $_GET['id']; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
      <script src="js/html5shiv.js"></script>
      <script src="js/respond.min.js"></script>
     <![endid]-->
-    <link href="Product1.css" rel="stylesheet" />
+    <link href="css/Product1.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -50,22 +50,21 @@
             </div>
     </div>
         <hr />
-    
  <div class="block1">
   
   <div class="top">
-    <ul>
-      <li><span class="converse">Long Sleeve Blouse</span></li>
-</a></li>
-    </ul>
+      <span class="converse">
+            <?php echo $row['title']; ?>
+      </span>
   </div>
   
   <div class="bottom">
     <img src="image/product_1_1.jpg" alt="product 1" />
-    <div class="heading">Women Oversized Casual Top</div>
-    <div class="info">Brand: Zanzea</div>
-    <div class="style">Rayon Cotton, No Pockets</div>
-    <div class="price">RM34.90 <span class="old-price">RM79.80</span></div>
+    <div class="heading"><?php echo $row['name']; ?></div>
+    <div class="heading"><?php echo $row['type']; ?></div>
+    <div class="info"><?php echo $row['brand']; ?></div>
+    <div class="style"><?php echo $row['description']; ?></div>
+    <div class="price"><?php echo $row['price']; ?></div>
   </div>
   
 </div>
@@ -73,49 +72,17 @@
 <div class="block2">
   
   <div class="top">
-    <ul>
-      <li><span class="converse">What's in the box:</span></li>
-</a></li>
-    </ul>
+      <span class="converse">What's in the box:</span>
   </div>
   
   <div class="bottom">
       <table>
         <tr>
-            <th>General Features</th> 
-            <th>Description</th>
+            <th><?php echo $row['comments']; ?></th>
         </tr>
         <tr>
             <td>Model</td>
             <td>ZANZEA-POA1260867</td>
-        </tr>
-        <tr>
-            <td>Clothing Material</td>
-            <td>Cotton</td>
-        </tr>
-        <tr>
-            <td>Style</td>
-            <td>Casual</td>
-        </tr>
-        <tr>
-            <td>Pattern</td>
-            <td>Plaid</td>
-        </tr>
-        <tr>
-            <td>Sleeves</td>
-            <td>Long Sleeve</td>
-        </tr>
-        <tr>
-            <td>Collar Type</td>
-            <td>Turn-down</td>
-        </tr>
-        <tr>
-            <td>Blouse Sleeve Style</td>
-            <td>Cuff Sleeve</td>
-        </tr>
-        <tr>
-            <td>Weight</td>
-            <td>0.33</td>
         </tr>
       </table>
       <button class="button">Add to cart!</button>
