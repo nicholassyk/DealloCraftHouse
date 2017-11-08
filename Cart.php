@@ -1,6 +1,32 @@
 <?php
-    $con = mysqli_connect('localhost', 'root', '', 'cart');
- ?>
+session_start();
+require 'connect.php';
+require 'item.php';
+$result = mysqli_query($con, 'SELECT * from products where id = '.$_GET['productID']);
+$product = mysqli_fetch_object($result);
+if(isset[$_GET['productID']]) {
+    $item = new Item();
+    $item->productID = $product->productID;
+    $item->name = $product->name;
+    $item->price = $product->price;
+    $item->quantity = 1;
+    // Check product is existing in cart
+    $index = -1;
+    $cart = unserialize(serialize($_SESSION['cart']));
+    for($i=0; $i<count($cart); $i++)
+        if($cart[$i]->id==$_GET['productID'])
+        {
+            $index =$i;
+            break;
+        }
+    if($index==-1)
+    $_SESSION['cart'][] = $item;
+    else {
+        $cart[$index]->quantity++;
+        $_SESSION['cart'] = $cart;
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -31,40 +57,35 @@
 		
         <div id="content">
             <h2>Item summary: </h2>
-            <table border="1">
+            <table cellpadding="2" cellspacing="2" border="1">
                 <tr>
                 <th>Item ID</th>
                 <th>Item Name</th>
                 <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub Total</th>
                 </tr>
-                
+                <?php
+                    $cart = unserialize(serialize($_SESSION['cart']));
+                    for($i=0; $i<count($cart); $i++) {
+                ?>
                 <tr>
-                <td><?php 
-				$result="SELECT productid FROM cart";
-                $q = mysqli_query($con, $result);
-                $row = mysqli_fetch_array($q, MYSQLI_ASSOC);
-                    echo $row['productid'];
-                    
-            
-				?></td>
-                <td>Product A</td>
-                <td>21.30</td>
+                    <td><?php echo $cart[$i]->productID; ?></td>
+                    <td><?php echo $cart[$i]->name; ?></td>
+                    <td><?php echo $cart[$i]->price; ?></td>
+                    <td><?php echo $cart[$i]->quantity; ?></td>
+                    <td><?php echo $cart[$i]->price * $cart[$i]->quantity; ?></td>
                 </tr>
                 
+                <?php } ?>
                 <tr>
-                <td>A0002</td>
-                <td>Product B</td>
-                <td>31.30</td>
-                </tr>
-                
-                 <tr>
-                <td>A0003</td>
-                <td>Product C</td>
-                <td>25</td>
+                    <td colspan="4" align="right">Sum</td>
+                    <td align="left"></td>
                 </tr>
             </table>
             
-            <h1>Total: </h1>
+            <h1></h1>
+            <button><a href="SpecificProductPage1.php">Continue Shopping</a></button>
             <button><a href="Payment.html">Proceed to Checkout</a></button>
         </div>
     
