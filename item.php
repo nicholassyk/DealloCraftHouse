@@ -1,7 +1,7 @@
 <?php
 
 class Item{
-    var $id;
+    var $productID;
     var $name;
     var $price;
     var $quantity;

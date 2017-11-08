@@ -2,9 +2,9 @@
 session_start();
 require 'connect.php';
 require 'item.php';
-$result = mysqli_query($con, 'SELECT * from products where id = '.$_GET['productID']);
-$product = mysqli_fetch_object($result);
-if(isset[$_GET['productID']]) {
+if(isset($_GET['id'])) {
+    $result = mysqli_query($con, 'SELECT * FROM products where productID='.$_GET['id']);
+    $product = mysqli_fetch_object($result);
     $item = new Item();
     $item->productID = $product->productID;
     $item->name = $product->name;
@@ -14,17 +14,23 @@ if(isset[$_GET['productID']]) {
     $index = -1;
     $cart = unserialize(serialize($_SESSION['cart']));
     for($i=0; $i<count($cart); $i++)
-        if($cart[$i]->id==$_GET['productID'])
-        {
-            $index =$i;
+        if($cart[$i]->productID==$_GET['id']) {
+            $index = $i;
             break;
         }
     if($index==-1)
-    $_SESSION['cart'][] = $item;
+        $_SESSION['cart'][] = $item;
     else {
         $cart[$index]->quantity++;
         $_SESSION['cart'] = $cart;
     }
+}
+//Delete in cart
+if(isset($_GET['index'])) {
+    $cart = unserialize(serialize($_SESSION['cart']));
+    unset($cart[$_GET['index']]);
+    $cart = array_values($cart);
+    $_SESSION['cart'] = $cart;
 }
 ?>
 
@@ -59,6 +65,7 @@ if(isset[$_GET['productID']]) {
             <h2>Item summary: </h2>
             <table cellpadding="2" cellspacing="2" border="1">
                 <tr>
+                <th>Option</th>
                 <th>Item ID</th>
                 <th>Item Name</th>
                 <th>Price</th>
@@ -67,9 +74,13 @@ if(isset[$_GET['productID']]) {
                 </tr>
                 <?php
                     $cart = unserialize(serialize($_SESSION['cart']));
+                    $s = 0;
+                    $index = 0;
                     for($i=0; $i<count($cart); $i++) {
+                        $s += $cart[$i]->price * $cart[$i]->quantity;
                 ?>
                 <tr>
+                    <td><a href="Cart.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')">Delete</a></td>
                     <td><?php echo $cart[$i]->productID; ?></td>
                     <td><?php echo $cart[$i]->name; ?></td>
                     <td><?php echo $cart[$i]->price; ?></td>
@@ -77,16 +88,19 @@ if(isset[$_GET['productID']]) {
                     <td><?php echo $cart[$i]->price * $cart[$i]->quantity; ?></td>
                 </tr>
                 
-                <?php } ?>
+                <?php 
+                        $index++;
+                    }
+                ?>
                 <tr>
                     <td colspan="4" align="right">Sum</td>
-                    <td align="left"></td>
+                    <td align="left"><?php echo $s; ?></td>
                 </tr>
             </table>
             
             <h1></h1>
-            <button><a href="SpecificProductPage1.php">Continue Shopping</a></button>
-            <button><a href="Payment.html">Proceed to Checkout</a></button>
+            <button><a href="textindex.php">Continue Shopping</a></button>
+            <button><a href="Payment.php">Proceed to Checkout</a></button>
         </div>
     
      <footer>
