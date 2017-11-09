@@ -16,7 +16,7 @@
             <li id="nav"><a href="index.php">Home</a></li>
             <li id="nav"><a href="ProductPage.php">Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
-            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <li style="float:right" id="nav"><a href="Cart.php">Cart</a></li>
             <li class="dropdown" style="float:right">
                 <a class="dropbtn">
 				<?php

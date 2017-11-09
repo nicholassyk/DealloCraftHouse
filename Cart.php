@@ -50,7 +50,7 @@ if(isset($_GET['index'])) {
             <li id="nav"><a id="navlinks" href="index.php">Home</a></li>
             <li id="nav"><a id="navlinks" href="ProductPage.php">Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
-            <li style="float:right" id="nav"><a id="navlinks" href="Cart.html">Cart</a></li>
+            <li style="float:right" id="nav"><a id="navlinks" href="Cart.php">Cart</a></li>
             <li class="dropdown" style="float:right">
                 <a class="dropbtn">Sign In</a>
                     <div class="dropdown-content">
