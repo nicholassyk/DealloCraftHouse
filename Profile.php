@@ -16,8 +16,9 @@
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
             <li id="nav"><a href="ProductPage.php">Products</a></li>
+			<li id="nav"><a href="selling.php">Sell Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
-            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <li style="float:right" id="nav"><a href="Cart.php">Cart</a></li>
 			<?php if (session_status() == PHP_SESSION_NONE) :?>
 				<li id="nav"><a href="Login.php">Login</a></li>
 			<?php else: ?>
