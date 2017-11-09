@@ -20,9 +20,10 @@
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
-            <li id="nav"><a href="ProductPage.php">Products</a></li>
+            <li id="nav"><a href="ProductPage1.php">Products</a></li>
+			<li id="nav"><a href="selling.php">Sell Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
-            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <li style="float:right" id="nav"><a href="Cart.php">Cart</a></li>
             <li class="dropdown" style="float:right">
                 <a class="dropbtn">Sign In</a>
                     <div class="dropdown-content">
@@ -63,7 +64,7 @@
     </div>
   
     <div class="middle">
-        <a href="SpecificProductPage1.php?id=<?php echo $row['productid']; ?>"><img src="image/product_1_1.jpg" alt="product 1" /></a>
+        <a href="SpecificProductPage1.php?id=<?php echo $row['productID']; ?>"><img src="image/product_1_1.jpg" alt="product 1" /></a>
     </div>
   
   <div class="bottom">
