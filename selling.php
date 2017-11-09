@@ -14,7 +14,7 @@
         <ul id="navbar">
             <li id="nav"><img src="logo.svg"></li>
             <li id="nav"><a href="index.php">Home</a></li>
-            <li id="nav"><a href="ProductPage.php">Products</a></li>
+            <li id="nav"><a href="ProductPage1.php">Products</a></li>
 			<li id="nav"><a href="selling.php">Sell Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
             <li style="float:right" id="nav"><a href="Cart.php">Cart</a></li>
