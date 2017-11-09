@@ -13,6 +13,10 @@
         <p><a href="index.php"><img src="logo.svg" id="homeimg" style="width:150px; height:60px; vertical-align-center"></a></p><br>
         <form id="registration" method="post" action="Signup.php">
             <h1>Create Account</h1>
+			First Name: <br>
+            <input type="text" name="fname" value="<?php if (isset($_POST["fname"])) echo $_POST["fname"]; ?>"><br><br>
+			Last Name: <br>
+            <input type="text" name="lname" value="<?php if (isset($_POST["lname"])) echo $_POST["lname"]; ?>"><br><br>
             Username: <br>
             <input type="text" name="name" value="<?php if (isset($_POST["name"])) echo $_POST["name"]; ?>"><br><br>
             Email: <br>

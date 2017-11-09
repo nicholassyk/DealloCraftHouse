@@ -1,5 +1,4 @@
-<?php require 'server.php'; session_start(); ?>
-
+<?php require 'server.php'; session_start();?>
 <!DOCTYPE html>
 <html>
     
@@ -16,23 +15,28 @@
             <li id="nav"><a href="index.php">Home</a></li>
             <li id="nav"><a href="ProductPage.php">Products</a></li>
             <li id="nav"><a href="Chat.php">Chat Forum</a></li>
-            <li style="float:right" id="nav"><a href="Cart.php">Cart</a></li>
-            <li class="dropdown" style="float:right">
-                <a class="dropbtn">
-				<?php
-					if($result = $con->query("SELECT username FROM user WHERE id = 0")) {
-					if($count = $result->num_rows) {
-						while ($row = $result->fetch_object()){
-							echo $row->username;
+            <li style="float:right" id="nav"><a href="Cart.html">Cart</a></li>
+            <?php if (!isset($_SESSION['username'])) :?>
+				<li id="nav" style="float:right;"><a href="Login.php">Login</a></li>
+			<?php else: ?>
+				<li class="dropdown" style="float:right">
+					<a class="dropbtn" href="Profile.php">
+					<?php
+						if($result = $con->query("SELECT username FROM user WHERE id = 0")) {
+						if($count = $result->num_rows) {
+							while ($row = $result->fetch_object()){
+								echo $row->username;
+							}
 						}
-					}
-					}
-				?>
-				</a>
-                    <div class="dropdown-content">
-                          <a href="Login.php" <?php session_destroy(); ?>>Logout</a>
-                    </div>
-            </li>
+						}
+					?>
+					</a>
+						<div class="dropdown-content">
+							  <a href="Login.php" <?php session_destroy(); ?>>Logout</a>
+						</div>
+				</li>
+			
+			<?php endif; ?>
 
         </ul>
 		

@@ -3,12 +3,20 @@
 	$errors = array();
 	
 	if (isset($_POST['register'])) {
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
 		$username = $_POST['name'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$repassword = $_POST['repassword'];
 	
 		// Check form inputs & return errors
+		if (empty($fname)) {
+			array_push($errors, "First name is required");
+		}
+		if (empty($lname)) {
+			array_push($errors, "Last name is required");
+		}
 		if (empty($username)) {
 			array_push($errors, "Username is required");
 		}
@@ -24,7 +32,8 @@
 		
 		// Save to database if no errors
 		if (count($errors) == 0) {
-			$sql = $con->query("INSERT INTO user (username, email, password) VALUES('{$username}', '{$email}', '{$password}')");
+			$str = 'empty.jpg';
+			$sql = $con->query("INSERT INTO user (firstname, lastname, username, email, password, img) VALUES('{$fname}', '{$lname}', '{$username}', '{$email}', '{$password}', '{$str}')");
 			header('Location: Login.php');
 		}	
 	}

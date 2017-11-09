@@ -220,14 +220,13 @@ label>input:checked + img{
 /* Profile Page */
 #profilewrapper{
 	width: 100%;
-	float: left;
 }
 
 .profileimgwrapper {
+	position: relative;
 	text-align: center;
 	width: 21%;
 	float: left;
-	margin-top: 3%;
 	margin-bottom: 5%;
 	margin-left: 5%;
 	padding: 5%;
@@ -248,9 +247,8 @@ label>input:checked + img{
 
 #profiledescriptionwrapper {
 	width: 49%;
-	float: left;
-	margin-left: 4%;
-	margin-top: 3%;
+	margin-left: 40%;
+	margin-top: 5%;
 	padding: 2%;
 	padding-left: 4%;
 	border: 2px solid #afeeee;
@@ -261,10 +259,6 @@ label>input:checked + img{
 	font-size: 1.7em;
 }
 
-.profiledescription {
-	
-}
-
 #profilebio{
 	line-height: 1.7;
 }
@@ -273,8 +267,8 @@ label>input:checked + img{
 	text-align: center;
 	width: 80%;
 	margin: 10%;
-	margin-top: 1%;
-	float: left;
+	margin-top: 5%;
+	clear: both;
 }
 
 .historytitle {
@@ -293,4 +287,39 @@ label>input:checked + img{
 
 #profiletable th {
 	background-color: #afeeee;
+}
+
+.editflnamebutton {
+	background-color: #afeeee;
+	width: 80px;
+	font-size: 0.9em;
+	line-height: 1.4;
+}
+
+.editimgbutton {
+	background-color: #afeeee;
+	width: 120px;
+	font-size: 0.9em;
+	line-height: 1.4;
+}
+
+.editprofilebutton {
+	background-color: #afeeee;
+	width: 180px;
+	font-size: 0.9em;
+	line-height: 1.8;
+}
+
+#profileform {
+	border: none;
+	width: 90%;
+}
+
+#profileform2 {
+	border: none;
+	width: 50%;
+}
+
+.profilebuttons {
+	width: 80px;
 }
